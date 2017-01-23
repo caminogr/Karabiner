@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<root>
+    <appdef>
+        <appname>ITERM2</appname>
+        <equal>com.googlecode.iterm2</equal>
+    </appdef>
+    <appdef>
+        <appname>MACVIM</appname>
+        <equal>org.vim.MacVim</equal>
+    </appdef>
+ 
+    
+    <item>
+        <name>control+space to enter</name>
+        <identifier>private.control_and_space_to_enter</identifier>
+        <autogen>
+          __KeyToKey__
+          KeyCode::SPACE, ModifierFlag::CONTROL_L,
+          KeyCode::ENTER
+        </autogen>
+    </item>
+    
+    <item>
+        <name>
+            control+n to delete
+        </name>
+        <identifier>
+            private.control_and_q_to_delete
+        </identifier>
+        <autogen>
+            __KeyToKey__
+            KeyCode::N, ModifierFlag::CONTROL_L,
+            KeyCode::DELETE
+        </autogen>
+    </item>
+
+    <item>
+        <name>
+            control+u to delete from cursor to the beginning of sentence exept iterm2
+        </name>
+        <identifier>
+            private.control_and_u_to_delete_from_cursor_to_the_beginning_of_sentence
+        </identifier>
+        <not>ITERM2,MACVIM</not>
+        <autogen>
+            __KeyToKey__
+            KeyCode::U, ModifierFlag::CONTROL_L,
+            KeyCode::DELETE,  ModifierFlag::COMMAND_L
+        </autogen>
+    </item>
+
+    <item>
+        <name>
+            control+g to delete from cursor to the end of sentence
+        </name>
+        <identifier>
+            private.control_and_q_to_delete_from_cursor_to_end_of_sentence
+        </identifier>
+        <autogen>
+            __KeyToKey__
+            KeyCode::G, ModifierFlag::CONTROL_L,
+            KeyCode::K, ModifierFlag::CONTROL_L
+        </autogen>
+    </item>
+
+    <item>
+        <name>control+q to esc</name>
+        <identifier>private.control_and_q_to_escape</identifier>
+        <autogen>__KeyToKey__ KeyCode::Q, ModifierFlag::CONTROL_L, KeyCode::ESCAPE</autogen>
+    </item>
+</root>
+
